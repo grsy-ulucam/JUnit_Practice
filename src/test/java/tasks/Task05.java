@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
-public class task05 {
+public class Task05 {
     //    Go to https://www.linkedin.com/
     //    When we write an e-mail without the @ sign in the e-mail box and press enter.
     //    Let's test the "Invalid email address" warning.
