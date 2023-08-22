@@ -77,7 +77,7 @@ public class Task12 {
         WebElement welcomeTeknosa = driver.findElement(By.xpath("/html/body/div[1]/main/div/div[1]/div[1]"));
 
         System.out.println(welcomeTeknosa.getText());
-        
+
     }
 
 
