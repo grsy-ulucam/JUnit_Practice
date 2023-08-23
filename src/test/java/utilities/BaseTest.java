@@ -5,20 +5,28 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.time.Duration;
 
+
 public class BaseTest {
-    protected static WebDriver driver;
+
+    protected WebDriver driver;
+
+
     @Before
-    public  void setup(){
+    public void setup() {
+
         WebDriverManager.firefoxdriver().setup();
-        driver=new FirefoxDriver();
-        driver.manage().window().maximize();;
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
     }
+
     @After
-    public void  tearDown(){
+    public void tearDown() {
+
         driver.quit();
     }
+
+
 }
