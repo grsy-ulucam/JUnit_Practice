@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
+import java.util.List;
 
 public class Task05 {
     //    Go to https://www.linkedin.com/
@@ -49,5 +50,46 @@ public class Task05 {
 
         Assert.assertTrue(alertMessage.isDisplayed());
 
+    }
+    @Test
+    public  void email() throws InterruptedException {
+       /*
+https://id.heroku.com/login sayfasına gidiniz.
+Bir mail adresi giriniz.
+Bir password giriniz.
+Login butonuna tıklayınız.
+"There was a problem with your login." text görünür ise "Kayıt Yapılamadı" yazdırınız.
+Eğer yazı görünür değilse "Kayıt Yapıldı" yazdırınız.
+Tüm sayfaları kapatınız.
+        */
+        driver.get("https://id.heroku.com/login");
+        List<WebElement>list=driver.findElements(By.className("form-control"));
+        WebElement mailBox=list.get(0);
+        mailBox.sendKeys("emre.yucel45.20");
+        WebElement password=list.get(1);
+        password.sendKeys("1234545666");
+        WebElement loginButton=driver.findElement(By.cssSelector("#login > form > button"));
+        loginButton.click();
+        Thread.sleep(10000);
+        WebElement errorMesaj=driver.findElement(By.xpath("//*[@id=\"login\"]/form/div[2]/label"));
+        Assert.assertTrue(errorMesaj.isDisplayed());
+        if (errorMesaj.isDisplayed()){
+            System.out.println("Kayıt Yapılamadı");
+        }else System.out.println("Kayıt Yapıldı");
+    }
+    @Test
+    public  void calculate(){
+        /*
+Go to URL: https://opensource-demo.orangehrmlive.com/
+Locate the username, password, login button using absolute xpath and relative xpath
+         */
+
+        driver.navigate().to(" https://opensource-demo.orangehrmlive.com/");
+        WebElement email= driver.findElement(By.xpath("//*[@name='username']"));
+        email.sendKeys("emre.yucel");
+        WebElement password=driver.findElement(By.xpath("//input[@type='password']"));
+        password.sendKeys("232342345");
+        WebElement login=driver.findElement(By.xpath("//*[@type='submit']"));
+        login.click();
     }
 }
