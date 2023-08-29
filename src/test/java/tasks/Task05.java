@@ -35,7 +35,7 @@ public class Task05 {
     }
 
     @Test
-    public void test01() {
+    public void linkedin() {
 
         driver.get("https://www.linkedin.com/");
 
