@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.time.Duration;
 
 
-public class BaseTest {
+public abstract class BaseTest {
 
     protected WebDriver driver;
 
