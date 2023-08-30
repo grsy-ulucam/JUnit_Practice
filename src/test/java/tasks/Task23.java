@@ -67,7 +67,7 @@ public class Task23 extends BaseTest {
        Actions actions=new Actions(driver);
        actions.doubleClick(square).build().perform();
        System.out.println("After color : "+square.getCssValue("background"));
-       
+
    }
 }
 
