@@ -16,7 +16,7 @@ public class Task24 extends BaseTest {
         driver.get("https://demo.guru99.com/test/upload/");
 
         WebElement input = driver.findElement(By.id("uploadfile_0"));
-        input.sendKeys("C:\\Users\\Acer\\IdeaProjects\\JUnit_Practice\\src\\test\\java\\tasks\\resources\\robot");
+        input.sendKeys("C:\\Users\\Acer\\IdeaProjects\\JUnit_Practice\\src\\test\\java\\resources\\robot");
 
         Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_CONTROL);
