@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -25,9 +26,9 @@ public class BaseTestReport {
 
     @Before
     public  void setup(){
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
 
-        driver=new ChromeDriver();
+        driver=new FirefoxDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
